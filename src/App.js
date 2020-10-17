@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import styles from './App.module.css'
+import cs from 'classnames'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes, faSearch } from '@fortawesome/free-solid-svg-icons'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = ()=> {
+    return (
+        <form className={styles.container}>
+            <FontAwesomeIcon style={{cursor: 'pointer'}} icon={faTimes} />
+            <label>Select Your Recipient</label>
+            <div className={styles.inputInfo}>
+            <input 
+                placeholder='Search from your phone contact'
+                type='text'
+                className={styles.containerInput} />
+                <FontAwesomeIcon className={styles.searchIcon} icon={faSearch} />
+            </div>
+
+            <div className={styles.separator}>OR</div>
+            
+            <div className={cs(styles.details, styles.first)}>
+                <label>Phone Number</label>
+                <input 
+                placeholder='Enter Number'
+                />
+            </div>
+            <div className={cs(styles.details, styles.second)}>
+                <label>Network</label>
+                <select>
+                    <option value="" disabled selected>Select Network</option>
+                    <option value="mtn">MTN</option>
+                    <option value="vodafone">Vodafone</option>
+                    <option value="airteltigo">AirtelTigo</option>
+                    <option value="glo">Glo</option>
+                </select>
+            </div>
+            <button className={styles.btn}>DONE</button>
+        </form>
+    )
 }
 
-export default App;
+export default App

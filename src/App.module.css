@@ -1,0 +1,100 @@
+.btn{
+    width: 675px;
+    background-color: rgb(31, 85, 129);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    word-spacing: 30px;
+    position: absolute;
+    bottom: 40px;
+}
+
+.container{
+    margin: 0 auto;
+    width: 50%;
+    height: 80vh;
+    padding: 20px;
+    position: relative;
+}
+
+.containerInput {
+    width: 660px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+
+.details{
+    padding: 5px;
+    width: 667px;
+    border: none;
+    margin-bottom: 10px;
+    background-color: white;
+    box-shadow: 2px 11px 11px -3px rgba(143,141,143,0.52);
+}
+
+.details > input, .details > select{
+    border: none;
+    width: 660px;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.first{
+    position: absolute;
+    top: 30%;
+}
+
+
+.inputInfo {
+    position:relative;
+    margin: 10px 0;
+    direction: ltr;
+    width: 660px;
+}
+
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+}
+.separator::before {
+    margin-right: 1.25em;
+}
+.separator::after {
+    margin-left: 1.25em;
+}
+
+.second{
+    position: absolute;
+    top: 55%;
+}
+
+select{
+    -webkit-appearance: none;
+}
+
+.searchIcon {
+    position:absolute;
+    bottom:12px;
+    right:1px;
+    width:24px;
+    height:24px;
+    
+}
+
+
